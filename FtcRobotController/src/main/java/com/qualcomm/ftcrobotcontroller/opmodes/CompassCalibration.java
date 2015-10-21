@@ -57,15 +57,15 @@ public class CompassCalibration extends OpMode {
   DcMotor motorRight;
   DcMotor motorLeft;
 
-  public CompassCalibration() {
-
-  }
-
   @Override
-  public void start() {
+  public void init() {
     compass = hardwareMap.compassSensor.get("compass");
     motorRight = hardwareMap.dcMotor.get("right");
     motorLeft = hardwareMap.dcMotor.get("left");
+  }
+
+  @Override
+  public void init_loop() {
 
     motorRight.setDirection(DcMotor.Direction.REVERSE);
 
@@ -136,10 +136,4 @@ public class CompassCalibration extends OpMode {
     if (failed){ return "Calibration Failed!"; }
     else { return "Calibration Succeeded." ; }
   }
-
-  @Override
-  public void stop() {
-
-  }
-
 }

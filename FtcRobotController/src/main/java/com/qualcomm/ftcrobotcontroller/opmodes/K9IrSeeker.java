@@ -68,7 +68,7 @@ public class K9IrSeeker extends OpMode {
 	 * @see com.qualcomm.robotcore.eventloop.opmode.OpMode#start()
 	 */
 	@Override
-	public void start() {
+	public void init() {
 
 		/*
 		 * Use the hardwareMap to get the dc motors and servos by name.

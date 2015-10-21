@@ -69,7 +69,7 @@ public class K9Line extends OpMode {
 	 * @see com.qualcomm.robotcore.eventloop.opmode.OpMode#start()
 	 */
 	@Override
-	public void start() {
+	public void init() {
 
 		/*
 		 * Use the hardwareMap to get the dc motors and servos by name.
@@ -131,7 +131,7 @@ public class K9Line extends OpMode {
 		/*
 		 * read the light sensor.
 		 */
-		reflection = reflectedLight.getLightLevel();
+		//reflection = reflectedLight.getLightLevel();
 		
 		/*
 		 * compare measured value to threshold.
